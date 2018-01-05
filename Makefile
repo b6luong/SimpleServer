@@ -8,7 +8,7 @@ server:
 	@echo "Building server"
 
 	@mkdir ${BUILD_ROOT}/build || true
-	go build -o ${BUILD_ROOT}/build/myserver server
+	env GOOS=linux GOARCH=amd64 go build -o ${BUILD_ROOT}/build/myserver server
 
 
 # make clean
